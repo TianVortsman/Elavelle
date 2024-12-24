@@ -1,0 +1,560 @@
+/* Root Variables */
+:root {
+    --primary-color: #000000;
+    --accent-color: #FFD700;
+    --text-color: #FFFFFF;
+    --background-color: #1A1A1D;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Body layout */
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex; /* Ensures the body uses flex layout */
+    flex-direction: column; /* Keeps the body content in a column */
+}
+
+/* Container */
+.elavelle-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.elavelle-header {
+    height: 200px;
+    background: var(--primary-color);
+    border-bottom: 1px solid var(--accent-color);
+    border-left: 1px solid var(--accent-color);
+    border-right: 1px solid var(--accent-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+}
+
+.elavelle-header-container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header Layout */
+.elavelle-header .elavelle-container {
+    display: flex; /* Keeps header content in row layout */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo and Brand */
+.elavelle-logo {
+    width: 200px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.elavelle-brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+.elavelle-nav {
+    display: flex;
+    gap: 2rem;
+    font-size: 1rem;
+}
+
+/* Navigation Links */
+.elavelle-nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.elavelle-nav-link:hover {
+    color: var(--accent-color);
+}
+
+/* Underline Effect */
+.elavelle-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.elavelle-nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Social Media Links */
+.elavelle-socials {
+    padding-right: 10px;
+    display: flex;
+    gap: 1rem;
+}
+
+.elavelle-social-link {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.elavelle-social-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.elavelle-social-link:hover .elavelle-social-icon {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.elavelle-hero {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--text-color);
+}
+
+.elavelle-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.elavelle-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.elavelle-btn {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.elavelle-btn:hover {
+    background: #e0b500;
+}
+
+/* Products Section */
+.elavelle-products {
+    padding: 3rem 0;
+}
+
+.elavelle-section-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+.elavelle-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.elavelle-product-card {
+    background: var(--primary-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.elavelle-product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.elavelle-product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.elavelle-product-name {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+.elavelle-product-description {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #ddd;
+}
+
+.elavelle-product-price {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.elavelle-footer {
+    background: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+.elavelle-footer-container {
+    margin-top: auto;
+}
+
+.elavelle-footer p {
+    margin-bottom: 0.5rem;
+}
+
+.elavelle-footer-nav {
+    margin-top: 0.5rem;
+}
+
+.elavelle-footer-link {
+    color: var(--accent-color);
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.elavelle-footer-link:hover {
+    color: #e0b500;
+}
+
+/* Media Queries for Small Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .elavelle-container {
+        width: 90%;
+    }
+
+    /* Header */
+    .elavelle-header {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .elavelle-header-container {
+        width: auto;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    /* Logo and Brand */
+    .elavelle-logo {
+        width: 50px; /* Scale down the logo */
+        height: auto;
+        margin-right: 1rem;
+        margin-bottom: 1rem; /* Add some space below the logo */
+    }
+
+    .elavelle-brand {
+        font-size: 1.8rem; /* Slightly smaller brand name */
+        font-weight: bold;
+        color: var(--accent-color);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* Navigation */
+    .elavelle-nav {
+        display: flex;
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 1rem; /* Reduced space between items */
+        font-size: 0.9rem;
+    }
+
+    /* Navigation Links */
+    .elavelle-nav-link {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+    .elavelle-nav-link:hover {
+        color: var(--accent-color);
+    }
+
+    /* Underline Effect */
+    .elavelle-nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--accent-color);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .elavelle-nav-link:hover::after {
+        transform: scaleX(1);
+    }
+
+    /* Social Media Links */
+    .elavelle-socials {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .elavelle-social-link {
+        display: inline-block;
+        width: 25px; /* Smaller social icons */
+        height: 25px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .elavelle-social-icon {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: opacity 0.3s ease;
+    }
+
+    .elavelle-social-link:hover .elavelle-social-icon {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+
+    /* Hero Section */
+    .elavelle-hero {
+        text-align: center;
+        padding: 2rem 0; /* Reduced padding */
+        background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        color: var(--text-color);
+    }
+
+    .elavelle-hero h2 {
+        font-size: 2rem; /* Smaller hero heading */
+        margin-bottom: 1rem;
+    }
+
+    .elavelle-hero p {
+        font-size: 1rem; /* Adjusted for smaller screens */
+        margin-bottom: 1.5rem;
+    }
+
+    .elavelle-btn {
+        display: inline-block;
+        background: var(--accent-color);
+        color: var(--primary-color);
+        padding: 0.6rem 1.2rem; /* Reduced padding */
+        font-size: 0.9rem; /* Smaller button text */
+        text-transform: uppercase;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .elavelle-btn:hover {
+        background: #e0b500;
+    }
+
+    /* Products Section */
+    .elavelle-products {
+        padding: 2rem 0; /* Reduced padding */
+    }
+
+    .elavelle-section-title {
+        font-size: 1.6rem; /* Smaller section title */
+        text-align: center;
+        margin-bottom: 1.5rem; /* Reduced margin */
+        color: var(--accent-color);
+        text-transform: uppercase;
+    }
+
+    .elavelle-product-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Stack product cards vertically */
+        gap: 1.5rem;
+    }
+
+    .elavelle-product-card {
+        padding: 1rem;
+    }
+
+    .elavelle-product-name {
+        font-size: 1.2rem; /* Reduced font size */
+    }
+
+    .elavelle-product-price {
+        font-size: 1.1rem;
+    }
+
+    /* Footer */
+    .elavelle-footer {
+        padding: 1rem; /* Reduced padding */
+        text-align: center;
+    }
+
+    .elavelle-footer-link {
+        font-size: 0.9rem; /* Smaller footer links */
+        margin: 0 0.5rem;
+    }
+}
+
+
+/* For medium screens (tablets) */
+@media (max-width: 1024px) {
+    body {
+        padding: 0;
+    }
+
+    .elavelle-container {
+        width: 95%;
+    }
+
+    /* Header */
+    .elavelle-header {
+        height: auto;
+        padding: 1.5rem;
+    }
+
+    .elavelle-header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .elavelle-nav {
+        display: flex;
+    }
+
+    .elavelle-socials {
+        display: flex;
+    }
+
+    .elavelle-hero {
+        padding: 2.5rem 0;
+    }
+
+    .elavelle-hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .elavelle-hero p {
+        font-size: 1.1rem;
+    }
+
+    .elavelle-btn {
+        font-size: 1rem;
+        padding: 0.7rem 1.4rem;
+    }
+
+    /* Products Section */
+    .elavelle-product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+    }
+
+    .elavelle-product-card {
+        padding: 1.2rem;
+    }
+
+    .elavelle-product-name {
+        font-size: 1.3rem;
+    }
+
+    .elavelle-product-price {
+        font-size: 1.1rem;
+    }
+
+    /* Footer */
+    .elavelle-footer {
+        padding: 1.2rem;
+    }
+
+    .elavelle-footer-link {
+        font-size: 0.9rem;
+    }
+}
+
+/* For large screens (desktops) */
+@media (min-width: 1025px) {
+    .elavelle-container {
+        width: 90%;
+    }
+
+    /* Products Section */
+    .elavelle-product-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+    }
+
+    .elavelle-product-card {
+        padding: 1.5rem;
+    }
+
+    .elavelle-product-name {
+        font-size: 1.4rem;
+    }
+
+    .elavelle-product-price {
+        font-size: 1.2rem;
+    }
+
+    /* Footer */
+    .elavelle-footer {
+        padding: 1.5rem;
+    }
+
+    .elavelle-footer-link {
+        font-size: 1rem;
+    }
+}
