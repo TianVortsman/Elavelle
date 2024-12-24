@@ -24,6 +24,7 @@
             <button onclick="switchTab(event, 'tab1')" class="elavelle-tab-btn active" data-tab="tab1">Natural Hygiene</button>
             <button onclick="switchTab(event, 'tab2')" class="elavelle-tab-btn" data-tab="tab2">Leather Products</button>
             <button onclick="switchTab(event, 'tab3')" class="elavelle-tab-btn" data-tab="tab3">Hides and Skins</button>
+            <button onclick="switchTab(event, 'tab4')" class="elavelle-tab-btn" data-tab="tab3">Handcrafted Products</button>
         </div>
     <div class="elavelle-container">
 
@@ -99,6 +100,23 @@
                     <div class="elavelle-product-card">
                         <img src="product3.jpg" alt="Product 3" class="elavelle-product-image">
                         <h4 class="elavelle-product-name">Product 3</h4>
+                        <p class="elavelle-product-description">Designed for comfort and style.</p>
+                        <p class="elavelle-product-price">$89.99</p>
+                        <a href="#" class="elavelle-btn">Buy Now</a>
+                        <a href="#" class="elavelle-btn">Add to Cart</a>
+                    </div>
+                    <!-- Additional Product Cards go here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="elavelle-tab-content active" id="tab4" style="display: none;">
+            <div class="elavelle-product-grid-container">
+                <div class="elavelle-product-grid">
+                    <!-- Product Card 3 -->
+                    <div class="elavelle-product-card">
+                        <img src="product3.jpg" alt="Product 3" class="elavelle-product-image">
+                        <h4 class="elavelle-product-name">Product 4</h4>
                         <p class="elavelle-product-description">Designed for comfort and style.</p>
                         <p class="elavelle-product-price">$89.99</p>
                         <a href="#" class="elavelle-btn">Buy Now</a>
