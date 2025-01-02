@@ -12,7 +12,7 @@
         <div class="elavelle-header-container">
             <img src="../img/logo-pure.png" alt="Logo" class="elavelle-logo">
             <nav class="elavelle-nav">
-                <a href="../index.php" class="elavelle-nav-link">Home</a>
+                <a href="../index.html" class="elavelle-nav-link">Home</a>
                 <a href="https://yvtutp-by.myshopify.com" class="elavelle-nav-link" target="_blank">Shop</a>
                 <a href="contact.php" class="elavelle-nav-link">Contact</a>
             </nav>
