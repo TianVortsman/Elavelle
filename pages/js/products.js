@@ -40,8 +40,24 @@
                 { id: '9983790580023', variantId: '', elementId: 'product-component-7' },
                 { id: '9983814566199', variantId: '', elementId: 'product-component-8' },
                 { id: '9983684542775', variantId: '', elementId: 'product-component-9' },
-                { id: '', variantId: '', elementId: 'product-component-10' },
-                { id: '', variantId: '', elementId: 'product-component-11' },
+                { id: '9998308311351', variantId: '', elementId: 'product-component-10' },
+                { id: '9998318993719', variantId: '', elementId: 'product-component-11' },
+                { id: '9998327611703', variantId: '', elementId: 'product-component-12' },
+                { id: '9990106251575', variantId: '50071259349303', elementId: 'product-component-13' },
+                { id: '9990106251575', variantId: '50071259382071', elementId: 'product-component-14' },
+                { id: '9990106251575', variantId: '50071259414839', elementId: 'product-component-15' },
+                { id: '9990106251575', variantId: '50071259447607', elementId: 'product-component-16' },
+                { id: '9982555685175', variantId: '50049543045431', elementId: 'product-component-17' },
+                { id: '9982555685175', variantId: '50049543078199', elementId: 'product-component-18' },
+                { id: '9982555685175', variantId: '50049543110967', elementId: 'product-component-19' },
+                { id: '10003252445495', variantId: '50116238770487', elementId: 'product-component-20' },
+                { id: '10003252445495', variantId: '50116238803255', elementId: 'product-component-21' },
+                { id: '10003252445495', variantId: '50116238836023', elementId: 'product-component-22' },
+                { id: '9990104023351', variantId: '50071253975351', elementId: 'product-component-23' },
+                { id: '9990104023351', variantId: '50071254008119', elementId: 'product-component-24' },
+                { id: '9983810142519', variantId: '', elementId: 'product-component-25' },
+                { id: '9990111985975', variantId: '', elementId: 'product-component-26' },
+                { id: '10005201682743', variantId: '', elementId: 'product-component-27' },
     
             ];
     
@@ -158,46 +174,50 @@
     }
 })();
 function switchTab(event, tabId) {
-  // Get all elements with the class "elavelle-tab-content" and hide them
-  const tabContents = document.querySelectorAll('.elavelle-tab-content');
-  tabContents.forEach(function(content) {
-      content.style.display = 'none'; // Hide all tab contents
-  });
-
-  // Get all tab buttons and remove the active class from them
-  const tabButtons = document.querySelectorAll('.elavelle-tab-btn');
-  tabButtons.forEach(function(button) {
-      button.classList.remove('active'); // Remove active state from all tab buttons
-  });
-
-  // Get the current tab element
-  const currentTab = document.getElementById(tabId);
-
-  if (currentTab) {
-      // Show the current tab's content
-      currentTab.style.display = 'block';
-
-      // Request fullscreen mode
-      if (!document.fullscreenElement) {
-          document.documentElement.requestFullscreen();
-      }
-
-      // Exit fullscreen after 1 second
-      setTimeout(function() {
-          if (document.fullscreenElement) {
-              document.exitFullscreen();
-          }
-      }, 100); // 1000ms = 1 second
+    // Get all elements with the class "elavelle-tab-content" and hide them
+    const tabContents = document.querySelectorAll('.elavelle-tab-content');
+    tabContents.forEach(function(content) {
+        content.style.display = 'none'; // Hide all tab contents
+    });
+  
+    // Get all tab buttons and remove the active class from them
+    const tabButtons = document.querySelectorAll('.elavelle-tab-btn');
+    tabButtons.forEach(function(button) {
+        button.classList.remove('active'); // Remove active state from all tab buttons
+    });
+  
+    // Get the current tab element
+    const currentTab = document.getElementById(tabId);
+  
+    if (currentTab) {
+        // Show the current tab's content
+        currentTab.style.display = 'block';
+    }
+  
+    // Add the active class to the clicked tab button
+    event.currentTarget.classList.add('active');
+  
+    // Trigger the window resize event after tab switching
+    triggerResize();
   }
-
-  // Add the active class to the clicked tab button
-  event.currentTarget.classList.add('active');
-}
-
-// Add event listeners for each tab button
-document.querySelectorAll('.elavelle-tab-btn').forEach(function(button) {
-  button.addEventListener('click', function(event) {
-      const tabId = button.getAttribute('data-tab'); // Get the associated tab ID
-      switchTab(event, tabId);
+  
+  // Add event listeners for each tab button
+  document.querySelectorAll('.elavelle-tab-btn').forEach(function(button) {
+    button.addEventListener('click', function(event) {
+        const tabId = button.getAttribute('data-tab'); // Get the associated tab ID
+        switchTab(event, tabId);
+    });
   });
-});
+  
+  // Function to simulate a window resize
+  function triggerResize() {
+    // Trigger a window resize event
+    window.dispatchEvent(new Event('resize'));
+  }
+  
+  // Listen for the resize event
+  window.addEventListener('resize', function() {
+    // You can add logic here to handle adjustments on resize
+  });
+  
+  

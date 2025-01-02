@@ -23,8 +23,8 @@
     <div class="elavelle-tabs">
             <button onclick="switchTab(event, 'tab1')" class="elavelle-tab-btn active" data-tab="tab1">Natural Hygiene</button>
             <button onclick="switchTab(event, 'tab2')" class="elavelle-tab-btn" data-tab="tab2">Leather Products</button>
-            <button onclick="switchTab(event, 'tab3')" class="elavelle-tab-btn" data-tab="tab3">Hides and Skins</button>
-            <button onclick="switchTab(event, 'tab4')" class="elavelle-tab-btn" data-tab="tab3">Handcrafted Products</button>
+            <button onclick="switchTab(event, 'tab3')" class="elavelle-tab-btn" data-tab="tab3">Fur Tan</button>
+            <button onclick="switchTab(event, 'tab4')" class="elavelle-tab-btn" data-tab="tab4">Handcrafted Products</button>
         </div>
     <div class="elavelle-container">
 
@@ -60,16 +60,6 @@
                     <div class="elavelle-product-card">
                     <div id='product-component-6'></div>
                     </div>
-                    <!-- Product Card 7 -->
-                    <div class="elavelle-product-card">
-                    </div>
-                    <!-- Product Card 8 -->
-                    <div class="elavelle-product-card">
-                    </div>
-                    <!-- Product Card 9 -->
-                    <div class="elavelle-product-card">
-                    </div>
-                    <!-- Product Card 10 -->
                 </div>
             </div>
         </div>
@@ -89,6 +79,62 @@
                     <div class="elavelle-product-card">
                     <div id='product-component-9'></div>
                     </div>
+
+                    <div class="elavelle-product-card">
+                    <div id='product-component-13'></div>
+                    </div>
+
+                    <div class="elavelle-product-card">
+                    <div id='product-component-14'></div>
+                    </div>
+
+                    <div class="elavelle-product-card">
+                    <div id='product-component-15'></div>
+                    </div>
+
+                    <div class="elavelle-product-card">
+                    <div id='product-component-16'></div>
+                    </div>
+
+                    <div class="elavelle-product-card">
+                    <div id='product-component-17'></div>
+                    </div>
+
+                    <div class="elavelle-product-card">
+                    <div id='product-component-18'></div>
+                    </div>
+
+                    <div class="elavelle-product-card">
+                    <div id='product-component-19'></div>
+                    </div>
+
+                    <div class="elavelle-product-card">
+                    <div id='product-component-20'></div>
+                    </div>
+
+                    <div class="elavelle-product-card">
+                    <div id='product-component-21'></div>
+                    </div>
+
+                    <div class="elavelle-product-card">
+                    <div id='product-component-22'></div>
+                    </div>
+
+                    <div class="elavelle-product-card">
+                    <div id='product-component-23'></div>
+                    </div>
+
+                    <div class="elavelle-product-card">
+                    <div id='product-component-24'></div>
+                    </div>
+
+                    <div class="elavelle-product-card">
+                    <div id='product-component-25'></div>
+                    </div>
+
+                    <div class="elavelle-product-card">
+                    <div id='product-component-26'></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -96,16 +142,11 @@
         <div class="elavelle-tab-content active" id="tab3" style="display: none;">
             <div class="elavelle-product-grid-container">
                 <div class="elavelle-product-grid">
-                    <!-- Product Card 3 -->
+                    <!-- Product Card -->
                     <div class="elavelle-product-card">
-                        <img src="product3.jpg" alt="Product 3" class="elavelle-product-image">
-                        <h4 class="elavelle-product-name">Product 3</h4>
-                        <p class="elavelle-product-description">Designed for comfort and style.</p>
-                        <p class="elavelle-product-price">$89.99</p>
-                        <a href="#" class="elavelle-btn">Buy Now</a>
-                        <a href="#" class="elavelle-btn">Add to Cart</a>
+                        <div id="product-component-27"></div>
+                        <!-- Shopify Buy Button Component -->
                     </div>
-                    <!-- Additional Product Cards go here -->
                 </div>
             </div>
         </div>
@@ -113,16 +154,18 @@
         <div class="elavelle-tab-content active" id="tab4" style="display: none;">
             <div class="elavelle-product-grid-container">
                 <div class="elavelle-product-grid">
-                    <!-- Product Card 3 -->
+                    <!-- Product Card -->
                     <div class="elavelle-product-card">
-                        <img src="product3.jpg" alt="Product 3" class="elavelle-product-image">
-                        <h4 class="elavelle-product-name">Product 4</h4>
-                        <p class="elavelle-product-description">Designed for comfort and style.</p>
-                        <p class="elavelle-product-price">$89.99</p>
-                        <a href="#" class="elavelle-btn">Buy Now</a>
-                        <a href="#" class="elavelle-btn">Add to Cart</a>
+                    <div id='product-component-10'></div>
                     </div>
-                    <!-- Additional Product Cards go here -->
+
+                    <div class="elavelle-product-card">
+                    <div id='product-component-11'></div>
+                    </div>
+
+                    <div class="elavelle-product-card">
+                    <div id='product-component-12'></div>
+                    </div>
                 </div>
             </div>
         </div>

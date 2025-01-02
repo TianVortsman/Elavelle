@@ -183,6 +183,8 @@ body {
 /* Products Section */
 .elavelle-products {
     padding: 3rem 0;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
 }
 
 .elavelle-section-title {
@@ -241,7 +243,8 @@ body {
 
 /* Footer */
 .elavelle-footer {
-    background: var(--primary-color);
+    background-image: url('../img/background.jpg');
+    background-size: cover;
     color: var(--text-color);
     text-align: center;
     padding: 1.5rem 0;
