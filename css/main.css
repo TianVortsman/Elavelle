@@ -69,9 +69,10 @@ body {
 
 /* Logo and Brand */
 .elavelle-logo {
-    width: 200px;
+    width: 100px;
     height: auto;
     margin-right: 1rem;
+    padding: 10px 10px;
 }
 
 .elavelle-brand {
@@ -299,8 +300,8 @@ body {
 
     /* Logo and Brand */
     .elavelle-logo {
-        width: 50px; /* Scale down the logo */
-        height: auto;
+        width: 40px; /* Scale down the logo */
+        height: 90%;
         margin-right: 1rem;
         margin-bottom: 1rem; /* Add some space below the logo */
     }

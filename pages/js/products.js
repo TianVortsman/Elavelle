@@ -58,6 +58,10 @@
                 { id: '9983810142519', variantId: '', elementId: 'product-component-25' },
                 { id: '9990111985975', variantId: '', elementId: 'product-component-26' },
                 { id: '10005201682743', variantId: '', elementId: 'product-component-27' },
+                { id: '10005188772151', variantId: '', elementId: 'product-component-28' },
+                { id: '10005187068215', variantId: '', elementId: 'product-component-29' },
+                { id: '10005191196983', variantId: '', elementId: 'product-component-30' },
+
     
             ];
     

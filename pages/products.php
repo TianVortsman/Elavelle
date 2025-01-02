@@ -10,7 +10,7 @@
 <body>
     <header class="elavelle-header">
         <div class="elavelle-header-container">
-            <img src="../img/logo-pure.png" alt="Logo" class="elavelle-logo">
+            <img src="../img/favicon.png" alt="Logo" class="elavelle-logo">
             <nav class="elavelle-nav">
                 <a href="../index.html" class="elavelle-nav-link">Home</a>
                 <a href="https://yvtutp-by.myshopify.com" class="elavelle-nav-link" target="_blank">Shop</a>
@@ -147,6 +147,21 @@
                         <div id="product-component-27"></div>
                         <!-- Shopify Buy Button Component -->
                     </div>
+
+                    <div class="elavelle-product-card">
+                        <div id="product-component-28"></div>
+                        <!-- Shopify Buy Button Component -->
+                    </div>
+
+                    <div class="elavelle-product-card">
+                        <div id="product-component-29"></div>
+                        <!-- Shopify Buy Button Component -->
+                    </div>
+
+                    <div class="elavelle-product-card">
+                        <div id="product-component-30"></div>
+                        <!-- Shopify Buy Button Component -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -174,10 +189,9 @@
 </section>
     <footer class="elavelle-footer">
         <div class="elavelle-footer-container">
-            <p>&copy; 2024 Elavelle. All Rights Reserved.</p>
+            <p>&copy; 2024 DLR-Artigianato-e-Pelle. All Rights Reserved.</p>
             <nav class="elavelle-footer-nav">
-                <a href="#" class="elavelle-footer-link">Privacy Policy</a>
-                <a href="#" class="elavelle-footer-link">Terms of Service</a>
+                <a href="termsofservice.php" class="elavelle-footer-link">Terms of Service</a>
                 <a href="contact.php" class="elavelle-footer-link">Contact Us</a>
             </nav>
         </div>
