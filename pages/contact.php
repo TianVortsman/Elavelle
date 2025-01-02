@@ -24,6 +24,24 @@ session_start(); // Start the session to access the message
             z-index: 9999;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
+
+        /* Home button styles */
+        .home-button {
+            display: inline-block;
+            background-color: #FFD700;
+            color: #1A1A1D;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #FFC300;
+        }
     </style>
 </head>
 <body>
@@ -53,8 +71,10 @@ session_start(); // Start the session to access the message
                 <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                 
                 <button type="submit">Submit</button>
+                <a href="../index.html" class="home-button"> Back to Home</a>
             </form>
         </section>
+        
     </main>
 
     <!-- Popup message -->

@@ -54,30 +54,64 @@
         <div class="elavelle-container">
             <h2 class="elavelle-section-title">Most popular!</h2>
             <div class="elavelle-product-grid">
+                <!-- Product 1 Card (Shampoo) -->
                 <div class="elavelle-product-card">
-                    <img src="img/shampoo.jpeg" alt="Product 1" class="elavelle-product-image">
-                    <h3 class="elavelle-product-name">Shampoo</h3>
-                    <p class="elavelle-product-description">Refresh and Revitalize with our tea tree range.</p>
+                    <div class="elavelle-product-carousel">
+                        <div class="carousel-images">
+                            <img src="img/shampoo.jpeg" alt="Shampoo Image 1" class="elavelle-product-image-carousel">
+                            <img src="img/conditioner.jpeg" alt="Shampoo Image 2" class="elavelle-product-image-carousel">
+                            <img src="img/shower-gel.png" alt="Shampoo Image 3" class="elavelle-product-image-carousel">
+                        </div>
+                    </div>
+                    <h3 class="elavelle-product-name">Elavelle</h3>
+                    <p class="elavelle-product-description">Refresh and Revitalize with our Natural Hygiene Range.</p>
                     <p class="elavelle-product-price">From R25.00</p>
-                    <a href="https://yvtutp-by.myshopify.com/products/dlr-artigianato-e-pelle-organic-shampoo?pr_prod_strat=collection_fallback&pr_rec_id=fe3d0a470&pr_rec_pid=9986529820983&pr_ref_pid=9986592538935&pr_seq=uniform" class="elavelle-btn" target="_blank">Buy Now</a>
+                    <a href="pages/products.php" class="elavelle-btn">Browse Now</a>
                 </div>
+    
+                <!-- Product 2 Card (Conditioner) -->
                 <div class="elavelle-product-card">
-                    <img src="img/conditioner.jpeg" alt="Product 2" class="elavelle-product-image">
-                    <h3 class="elavelle-product-name">Conditioner</h3>
-                    <p class="elavelle-product-description">Naturally nourishes and softens hair with organic botanicals and essential oils.</p>
-                    <p class="elavelle-product-price">From R25.00</p>
-                    <a href="https://yvtutp-by.myshopify.com/products/dlr-artigianato-e-pelle-organic-conditioner" class="elavelle-btn" target="_blank">Buy Now</a>
+                    <div class="elavelle-product-carousel">
+                        <div class="carousel-images">
+                            <img src="img/riflebag1.png" alt="Conditioner Image 1" class="elavelle-product-image-carousel">
+                            <img src="img/riflebag2.png" alt="Conditioner Image 2" class="elavelle-product-image-carousel">
+                            <img src="img/riflebag3.png" alt="Conditioner Image 3" class="elavelle-product-image-carousel">
+                        </div>
+                    </div>
+                    <h3 class="elavelle-product-name">Hunting Accessories</h3>
+                    <p class="elavelle-product-description">View our Genuiine African Hunting accessories.</p>
+                    <p class="elavelle-product-price">From R2625.00</p>
+                    <a href="pages/products.php" class="elavelle-btn">Browse Now</a>
                 </div>
+    
+                <!-- Product 3 Card (Shower Gel) -->
                 <div class="elavelle-product-card">
-                    <img src="img/shower-gel.png" alt="Product 3" class="elavelle-product-image">
-                    <h3 class="elavelle-product-name">Shower Gel</h3>
-                    <p class="elavelle-product-description">Gentle, all-natural shower gel that cleanses and refreshes the skin.</p>
-                    <p class="elavelle-product-price">From R25.00</p>
-                    <a href="#" class="elavelle-btn">Buy Now</a>
+                    <div class="elavelle-product-carousel">
+                        <div class="carousel-images">
+                            <img src="img/postmanbag1.png" alt="Shower Gel Image 1" class="elavelle-product-image-carousel">
+                            <img src="img/postmanbag2.png" alt="Shower Gel Image 2" class="elavelle-product-image-carousel">
+                            <img src="img/postmanbag3.png" alt="Shower Gel Image 3" class="elavelle-product-image-carousel">
+                        </div>
+                    </div>
+                    <h3 class="elavelle-product-name">Leather Products</h3>
+                    <p class="elavelle-product-description">Various ethically sources Leather products.</p>
+                    <p class="elavelle-product-price">From R500.00</p>
+                    <a href="pages/products.php" class="elavelle-btn">Browse Now</a>
                 </div>
             </div>
         </div>
     </section>
+    
+    <!-- Footer Section -->
+    <footer class="elavelle-footer">
+        <div class="elavelle-footer-container">
+            <p>&copy; 2024 DLR-Artigianato-e-Pelle. All rights reserved.</p>
+            <nav class="elavelle-footer-nav">
+                <a href="pages/termsofservice.php" class="elavelle-footer-link">Terms of Service</a>
+            </nav>
+        </div>
+    </footer>
+    
 
     <!-- Footer Section -->
     <footer class="elavelle-footer">
@@ -88,5 +122,74 @@
             </nav>
         </div>
     </footer>
+    <script>
+// JavaScript to handle the carousel functionality for multiple products
+let currentSlide1 = 0; // Initialize the current slide index for the first product
+let currentSlide2 = 0; // Initialize the current slide index for the second product
+let currentSlide3 = 0; // Initialize the current slide index for the third product
+
+const totalImages = 3; // Total number of images (for your 3 images)
+const carouselImages1 = document.querySelectorAll('.elavelle-product-card .carousel-images')[0]; // Select the first product carousel container
+const carouselImages2 = document.querySelectorAll('.elavelle-product-card .carousel-images')[1]; // Select the second product carousel container
+const carouselImages3 = document.querySelectorAll('.elavelle-product-card .carousel-images')[2]; // Select the third product carousel container
+
+let transitionInProgress = false; // Flag to prevent overlapping transitions
+
+// Function to change the slide
+function changeSlide() {
+    if (transitionInProgress) return; // Prevent overlapping transitions
+
+    transitionInProgress = true;
+
+    // Handle the first product carousel
+    if (currentSlide1 === 0) {
+        carouselImages1.style.transition = 'transform 1s ease-in-out';
+        carouselImages1.style.transform = `translateX(-35%)`;
+    } else if (currentSlide1 === 1) {
+        carouselImages1.style.transition = 'transform 1s ease-in-out';
+        carouselImages1.style.transform = `translateX(-70%)`;
+    } else if (currentSlide1 === 2) {
+        carouselImages1.style.transition = 'transform 1s ease-in-out';
+        carouselImages1.style.transform = `translateX(0%)`;
+    }
+
+    // Handle the second product carousel
+    if (currentSlide2 === 0) {
+        carouselImages2.style.transition = 'transform 1s ease-in-out';
+        carouselImages2.style.transform = `translateX(-35%)`;
+    } else if (currentSlide2 === 1) {
+        carouselImages2.style.transition = 'transform 1s ease-in-out';
+        carouselImages2.style.transform = `translateX(-70%)`;
+    } else if (currentSlide2 === 2) {
+        carouselImages2.style.transition = 'transform 1s ease-in-out';
+        carouselImages2.style.transform = `translateX(0%)`;
+    }
+
+    // Handle the third product carousel
+    if (currentSlide3 === 0) {
+        carouselImages3.style.transition = 'transform 1s ease-in-out';
+        carouselImages3.style.transform = `translateX(-35%)`;
+    } else if (currentSlide3 === 1) {
+        carouselImages3.style.transition = 'transform 1s ease-in-out';
+        carouselImages3.style.transform = `translateX(-70%)`;
+    } else if (currentSlide3 === 2) {
+        carouselImages3.style.transition = 'transform 1s ease-in-out';
+        carouselImages3.style.transform = `translateX(0%)`;
+    }
+
+    // After the transition, wait for 3 seconds before moving to the next slide
+    setTimeout(function() {
+        currentSlide1 = (currentSlide1 + 1) % totalImages;
+        currentSlide2 = (currentSlide2 + 1) % totalImages;
+        currentSlide3 = (currentSlide3 + 1) % totalImages;
+        transitionInProgress = false; // Allow the next transition to happen
+    }, 3000); // 3 seconds pause after each transition
+}
+
+// Set interval to automatically change the slide every 6 seconds
+setInterval(changeSlide, 6000); // Change slide every 6 seconds (3 seconds pause, 3 seconds for the transition)
+
+
+    </script>
 </body>
 </html>
