@@ -58,6 +58,17 @@ header {
     margin: 0.5rem 0;
     font-size: 1rem;
 }
+.img-container{
+    margin-left: 45px;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+.contact-img{
+    width: auto;
+    height: 250px;
+    margin-bottom: 0;
+    opacity: 0.7;
+}
 
 /* Contact Form Section */
 form {

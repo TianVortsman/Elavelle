@@ -56,6 +56,7 @@ session_start(); // Start the session to access the message
             <p><strong>Email:</strong> info@dlr-artigianato-e-pelle.shop</p>
             <p><strong>Phone:</strong> +2761 625 9949</p>
             <p><strong>Address:</strong> Ramsgate KZN</p>
+            <div class="img-container"><img src="../img/favicon.png" class="contact-img"></div>
         </section>
 
         <section class="contact-form">
